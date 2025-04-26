@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/infoLayout8"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFEF">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFEF"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/clubNameTextView8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/saveButton8"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:textColor="#583776"
+            android:textSize="16sp"
+            android:text="Майстерня Novikova PaintCraft" />
+
+        <ImageView
+            android:id="@+id/saveButton8"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="2dp"
+            android:clickable="true"
+            android:src="@drawable/favorite_foreground"
+            app:layout_constraintBottom_toBottomOf="@+id/clubNameTextView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Адреса-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EDEDC6"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        >
+        <TextView
+            android:id="@+id/addressTextView8"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="#583776"
+            android:text="Адреса:" />
+        <TextView
+            android:id="@+id/clubAddressTextView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#583776"
+            android:text="м. Вінниця, вул. Хлібна 14" />
+    </LinearLayout>
+    <!-- Телефон-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+        <TextView
+            android:id="@+id/phoneTextView8"
+            android:layout_height="wrap_content"
+            android:text="Телефон:"
+            android:textColor="#583776"
+            android:layout_width="100dp"/>
+        <TextView
+            android:id="@+id/clubPhoneTextView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#583776"
+            android:text="(073) 419 32 22" />
+    </LinearLayout>
+    <!-- Сайт-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EDEDC6"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+        <TextView
+            android:id="@+id/siteTextView8"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="#583776"
+            android:text="Сайт:" />
+        <TextView
+            android:id="@+id/clubWebsiteTextView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#583776"
+            android:text="https://www.paintcraftworkroom.com/" />
+    </LinearLayout>
+
+
+</LinearLayout>

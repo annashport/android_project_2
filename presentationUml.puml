@@ -1,0 +1,85 @@
+@startuml
+class com.example.myyyyapplication.presentation.fragments.ClubsFragment {
++ void onCreateView(void,LayoutInflater,ViewGroup?,void,Bundle?)
++ void null()
+}
+
+class com.example.myyyyapplication.presentation.MainActivity {
+- ActivityMainBinding binding
++ void onCreate(Bundle?)
+- void replaceFragment(Fragment)
+}
+
+
+class com.example.myyyyapplication.presentation.fragments.clubsfragments.GroupedClubsFragment$Companion {
++  GROUP_BY_TYPE
+}
+
+class com.example.myyyyapplication.presentation.fragments.clubsfragments.GroupedClubsFragment {
+- FragmentInterestsBinding? _binding
+-  binding
+- GroupedClubsViewModel vm
++ void onCreateView(void,LayoutInflater,ViewGroup?,void,Bundle?)
++ void null()
+- void subscribeToWorkshops()
++ void onDestroyView()
+}
+
+
+class com.example.myyyyapplication.presentation.viewmodel.GroupedClubsViewModel {
+- MutableLiveData<Map<String, List<WorkshopModel>>> _workshopsLiveData
++ LiveData<Map<String, List<WorkshopModel>>> workshopsLiveData
+}
+
+class com.example.myyyyapplication.presentation.fragments.MapFragment {
+- GoogleMap mMap
+- MapView mapView
++ void onCreateView(void,LayoutInflater,ViewGroup?,void,Bundle?)
++ void null()
++ void onViewCreated(View,Bundle?)
++ void onMapReady(GoogleMap)
+}
+
+
+class com.example.myyyyapplication.presentation.fragments.PlanFragment {
++ void onCreateView(void,LayoutInflater,ViewGroup?,void,Bundle?)
++ void null()
+}
+
+class com.example.myyyyapplication.presentation.GroupType$Interests {
+}
+class com.example.myyyyapplication.presentation.GroupType$Prices {
+}
+class com.example.myyyyapplication.presentation.GroupType$Days {
+}
+class com.example.myyyyapplication.presentation.GroupType$Hours {
+}
+class com.example.myyyyapplication.presentation.GroupType {
+}
+class com.example.myyyyapplication.presentation.fragments.clubsfragments.PageClubsFragment {
++ void onCreateView(void,LayoutInflater,ViewGroup?,void,Bundle?)
++ void null()
++ void onViewCreated(View,Bundle?)
+}
+
+
+
+androidx.fragment.app.Fragment <|-- com.example.myyyyapplication.presentation.fragments.ClubsFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myyyyapplication.presentation.MainActivity
+com.example.myyyyapplication.presentation.fragments.clubsfragments.GroupedClubsFragment +.. com.example.myyyyapplication.presentation.fragments.clubsfragments.GroupedClubsFragment$Companion
+androidx.fragment.app.Fragment <|-- com.example.myyyyapplication.presentation.fragments.clubsfragments.GroupedClubsFragment
+androidx.lifecycle.ViewModel <|-- com.example.myyyyapplication.presentation.viewmodel.GroupedClubsViewModel
+androidx.fragment.app.Fragment <|-- com.example.myyyyapplication.presentation.fragments.MapFragment
+com.google.android.gms.maps.OnMapReadyCallback <|.. com.example.myyyyapplication.presentation.fragments.MapFragment
+androidx.fragment.app.Fragment <|-- com.example.myyyyapplication.presentation.fragments.PlanFragment
+com.example.myyyyapplication.presentation.GroupType +.. com.example.myyyyapplication.presentation.GroupType$Interests
+com.example.myyyyapplication.presentation.GroupType <|-- com.example.myyyyapplication.presentation.GroupType$Interests
+com.example.myyyyapplication.presentation.GroupType +.. com.example.myyyyapplication.presentation.GroupType$Prices
+com.example.myyyyapplication.presentation.GroupType <|-- com.example.myyyyapplication.presentation.GroupType$Prices
+com.example.myyyyapplication.presentation.GroupType +.. com.example.myyyyapplication.presentation.GroupType$Days
+com.example.myyyyapplication.presentation.GroupType <|-- com.example.myyyyapplication.presentation.GroupType$Days
+com.example.myyyyapplication.presentation.GroupType +.. com.example.myyyyapplication.presentation.GroupType$Hours
+com.example.myyyyapplication.presentation.GroupType <|-- com.example.myyyyapplication.presentation.GroupType$Hours
+java.io.Serializable <|.. com.example.myyyyapplication.presentation.GroupType
+androidx.fragment.app.Fragment <|-- com.example.myyyyapplication.presentation.fragments.clubsfragments.PageClubsFragment
+@enduml

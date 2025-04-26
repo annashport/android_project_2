@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:background="@drawable/bg_add_chedule_header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/ivClose"/>
+
+    <TextView
+        android:textColor="@android:color/white"
+        android:text="Нове Заняття"
+        android:fontFamily="@font/schoolbell_regular"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/ivClose"/>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:src="@drawable/close__1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--   todo add drawable-->
+
+    <Button
+        android:id="@+id/btnChoose"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#f5effa"
+        android:text="Обери заняття"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        android:drawableEnd="@drawable/list_24"
+        android:textColor="#583776"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivClose" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toBottomOf="@id/ivClose"
+        android:visibility="gone"
+        />
+
+    <NumberPicker
+        android:id="@+id/hours"
+        app:layout_constraintTop_toBottomOf="@id/spinner"
+        app:layout_constraintBottom_toTopOf="@id/btnSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Зберегти заняття"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:backgroundTint="#9E64D1"
+        android:visibility="gone"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

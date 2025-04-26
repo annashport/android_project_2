@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">VinClubs</string>
+    <string name="image_description">Plane</string>
+    <string name="btn_interests">Пошук за інтересами</string>
+    <string name="btn_prices">Пошук за цінами</string>
+    <string name="btn_days">Пошук за днями тижня</string>
+    <string name="btn_hours">Пошук за часом</string>
+    <string name="clubs_page">Choose your club</string>
+    <string name="map_page">Find your club</string>
+    <string name="plan_page">Time for planning</string>
+    <string name="map_description">Карта з відображенням місцезнаходження.</string>
+    <string name="about">Тут ви зможете знайти гуртки міста Вінниці ;)</string>
+    <string name="search_hint">Введіть назву гуртка</string>
+
+</resources>

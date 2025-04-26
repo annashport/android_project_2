@@ -1,0 +1,135 @@
+@startuml
+class com.example.myyyyapplication.presentation.fragments.ClubsFragment {
++ void onCreateView(void,LayoutInflater,ViewGroup?,void,Bundle?)
++ void null()
+}
+
+interface com.example.myyyyapplication.data.source.remote.WorkshopRemoteDataSource {
++ List<WorkshopModel> loadWorkshops()
+}
+
+class com.example.myyyyapplication.data.source.local.WorkshopEntity {
+}
+class com.example.myyyyapplication.presentation.fragments.PlanFragment {
++ void onCreateView(void,LayoutInflater,ViewGroup?,void,Bundle?)
++ void null()
+}
+
+interface com.example.myyyyapplication.data.source.local.WorkshopDao {
++ void insert(WorkshopEntity)
++ void insertAll(List<WorkshopEntity>)
++ Boolean isEmpty()
++ List<WorkshopEntity> getAll()
++ WorkshopEntity? getClubByInterests(String)
+}
+
+class com.example.myyyyapplication.data.repository.WorkshopRepositoryImpl {
++ List<WorkshopModel> getWorkshops()
+- void checkDBandLoad()
+}
+
+class com.example.myyyyapplication.MyApplication {
++ void onCreate()
+- void initKoin()
+- Module getKoinModule()
+}
+
+class com.example.myyyyapplication.data.source.remote.model.WorkshopModel {
+}
+class com.example.myyyyapplication.data.source.local.WorkshopDatabase$Companion {
+- WorkshopDatabase? INSTANCE
++ WorkshopDatabase getDatabase(Context)
+}
+
+
+abstract class com.example.myyyyapplication.data.source.local.WorkshopDatabase {
++ WorkshopDao myDao()
+}
+
+class com.example.myyyyapplication.presentation.fragments.clubsfragments.PageClubsFragment {
++ void onCreateView(void,LayoutInflater,ViewGroup?,void,Bundle?)
++ void null()
++ void onViewCreated(View,Bundle?)
+}
+
+class com.example.myyyyapplication.presentation.MainActivity {
+- ActivityMainBinding binding
++ void onCreate(Bundle?)
+- void replaceFragment(Fragment)
+}
+
+
+class com.example.myyyyapplication.presentation.fragments.clubsfragments.GroupedClubsFragment$Companion {
++  GROUP_BY_TYPE
+}
+
+class com.example.myyyyapplication.presentation.fragments.clubsfragments.GroupedClubsFragment {
+- FragmentInterestsBinding? _binding
+-  binding
+- GroupedClubsViewModel vm
++ void onCreateView(void,LayoutInflater,ViewGroup?,void,Bundle?)
++ void null()
+- void subscribeToWorkshops()
++ void onDestroyView()
+}
+
+
+class com.example.myyyyapplication.presentation.viewmodel.GroupedClubsViewModel {
+- MutableLiveData<Map<String, List<WorkshopModel>>> _workshopsLiveData
++ LiveData<Map<String, List<WorkshopModel>>> workshopsLiveData
+}
+
+class com.example.myyyyapplication.presentation.fragments.MapFragment {
+- GoogleMap mMap
+- MapView mapView
++ void onCreateView(void,LayoutInflater,ViewGroup?,void,Bundle?)
++ void null()
++ void onViewCreated(View,Bundle?)
++ void onMapReady(GoogleMap)
+}
+
+
+class com.example.myyyyapplication.data.source.remote.WorkshopMockDataSourceImpl {
++ List<WorkshopModel> loadWorkshops()
+}
+
+interface com.example.myyyyapplication.data.repository.WorkshopRepository {
++ List<WorkshopModel> getWorkshops()
+}
+
+class com.example.myyyyapplication.presentation.GroupType$Interests {
+}
+class com.example.myyyyapplication.presentation.GroupType$Prices {
+}
+class com.example.myyyyapplication.presentation.GroupType$Days {
+}
+class com.example.myyyyapplication.presentation.GroupType$Hours {
+}
+class com.example.myyyyapplication.presentation.GroupType {
+}
+
+
+androidx.fragment.app.Fragment <|-- com.example.myyyyapplication.presentation.fragments.ClubsFragment
+androidx.fragment.app.Fragment <|-- com.example.myyyyapplication.presentation.fragments.PlanFragment
+com.example.myyyyapplication.data.repository.WorkshopRepository <|.. com.example.myyyyapplication.data.repository.WorkshopRepositoryImpl
+android.app.Application <|-- com.example.myyyyapplication.MyApplication
+com.example.myyyyapplication.data.source.local.WorkshopDatabase +.. com.example.myyyyapplication.data.source.local.WorkshopDatabase$Companion
+androidx.room.RoomDatabase <|-- com.example.myyyyapplication.data.source.local.WorkshopDatabase
+androidx.fragment.app.Fragment <|-- com.example.myyyyapplication.presentation.fragments.clubsfragments.PageClubsFragment
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myyyyapplication.presentation.MainActivity
+com.example.myyyyapplication.presentation.fragments.clubsfragments.GroupedClubsFragment +.. com.example.myyyyapplication.presentation.fragments.clubsfragments.GroupedClubsFragment$Companion
+androidx.fragment.app.Fragment <|-- com.example.myyyyapplication.presentation.fragments.clubsfragments.GroupedClubsFragment
+androidx.lifecycle.ViewModel <|-- com.example.myyyyapplication.presentation.viewmodel.GroupedClubsViewModel
+androidx.fragment.app.Fragment <|-- com.example.myyyyapplication.presentation.fragments.MapFragment
+com.google.android.gms.maps.OnMapReadyCallback <|.. com.example.myyyyapplication.presentation.fragments.MapFragment
+com.example.myyyyapplication.data.source.remote.WorkshopRemoteDataSource <|.. com.example.myyyyapplication.data.source.remote.WorkshopMockDataSourceImpl
+com.example.myyyyapplication.presentation.GroupType +.. com.example.myyyyapplication.presentation.GroupType$Interests
+com.example.myyyyapplication.presentation.GroupType <|-- com.example.myyyyapplication.presentation.GroupType$Interests
+com.example.myyyyapplication.presentation.GroupType +.. com.example.myyyyapplication.presentation.GroupType$Prices
+com.example.myyyyapplication.presentation.GroupType <|-- com.example.myyyyapplication.presentation.GroupType$Prices
+com.example.myyyyapplication.presentation.GroupType +.. com.example.myyyyapplication.presentation.GroupType$Days
+com.example.myyyyapplication.presentation.GroupType <|-- com.example.myyyyapplication.presentation.GroupType$Days
+com.example.myyyyapplication.presentation.GroupType +.. com.example.myyyyapplication.presentation.GroupType$Hours
+com.example.myyyyapplication.presentation.GroupType <|-- com.example.myyyyapplication.presentation.GroupType$Hours
+java.io.Serializable <|.. com.example.myyyyapplication.presentation.GroupType
+@enduml

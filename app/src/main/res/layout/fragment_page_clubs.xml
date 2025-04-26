@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFFE0"
+    tools:context=".presentation.fragments.clubsfragments.PageClubsFragment">
+
+
+    <Button
+        android:id="@+id/button_Interests"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#E2C8FA"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:insetTop="10dp"
+        android:insetBottom="10dp"
+        android:text="@string/btn_interests"
+        android:textColor="#583776"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_prices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/button_prices"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#E2C8FA"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:insetTop="10dp"
+        android:insetBottom="10dp"
+        android:text="@string/btn_prices"
+        android:textColor="#583776"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_days"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_Interests"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/button_days"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#E2C8FA"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:insetTop="10dp"
+        android:insetBottom="10dp"
+        android:text="@string/btn_days"
+        android:textColor="#583776"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button_hours"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_prices"
+        tools:ignore="VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/button_hours"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="#E2C8FA"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:insetTop="10dp"
+        android:insetBottom="10dp"
+        android:text="@string/btn_hours"
+        android:textColor="#583776"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_days"
+        tools:ignore="VisualLintButtonSize" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/gradient_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/schoolbell_regular"
+            android:text="@string/clubs_page"
+            android:textColor="#583776"
+            android:textSize="38sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="81dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="24dp"
+        android:contentDescription="@string/image_description"
+        android:rotation="21"
+
+        android:src="@drawable/ic_plane_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_hours"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="-6dp"
+        android:contentDescription="@string/image_description"
+        android:rotation="6"
+        android:src="@drawable/ic_plane_foreground"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/button_hours"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="38dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="96dp"
+        android:contentDescription="@string/image_description"
+        android:rotation="-30"
+        android:src="@drawable/ic_plane_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        tools:ignore="ImageContrastCheck" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:rotation="178"
+        android:src="@drawable/swipe_up"
+        app:layout_constraintBottom_toTopOf="@+id/button_Interests"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.837" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clubs_nav"
+    app:startDestination="@id/pageClubs">
+
+    <fragment
+        android:id="@+id/pageClubs"
+        android:name="com.example.myyyyapplication.presentation.fragments.clubsfragments.PageClubsFragment"
+        android:label="fragment_page_clubs"
+        tools:layout="@layout/fragment_page_clubs" >
+        <action
+            android:id="@+id/action_pageClubs_to_interests"
+            app:destination="@id/interests" />
+    </fragment>
+    <fragment
+        android:id="@+id/interests"
+        android:name="com.example.myyyyapplication.presentation.fragments.clubsfragments.GroupedClubsFragment"
+        android:label="fragment_interests"
+        tools:layout="@layout/fragment_interests" />
+
+</navigation>
